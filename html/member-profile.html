@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>林檎民主党 — メンバー紹介</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="logo" aria-hidden></div>
+        <div>
+          <h1>林檎民主党 — メンバー紹介</h1>
+          <p class="lead">
+            メンバーのプロフィールを一覧で見るページです。編集はHTMLのリストを書き換えてください。
+          </p>
+        </div>
+      </header>
+
+      <div class="controls">
+        <div class="search" role="search" aria-label="メンバー検索">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            style="opacity: 0.6; margin-right: 8px"
+          >
+            <path
+              d="M21 21l-4.35-4.35"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="11"
+              cy="11"
+              r="6"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input
+            id="q"
+            placeholder="名前・役職・キーワードで検索"
+            oninput="filterMembers()"
+          />
+        </div>
+        <div class="filter" role="list">
+          <div class="chip" onclick="filterTag('all')">すべて</div>
+          <div class="chip" onclick="filterTag('幹部')">幹部</div>
+          <div class="chip" onclick="filterTag('地域')">地域代表</div>
+          <div class="chip" onclick="filterTag('広報')">広報</div>
+        </div>
+      </div>
+
+      <main>
+        <section class="grid" id="members">
+          <article
+            class="card"
+            data-name="kntnkmr"
+            data-tags="メンバー"
+            tabindex="0"
+          >
+            <div class="avatar">k</div>
+            <div class="meta">
+              <h3 class="name">kntnkmr</h3>
+              <div class="role">メンバー</div>
+              <div class="bio">
+                林檎民主党の活動に参加しているメンバー。詳細プロフィールは編集中です。<br />公式サイト：<a
+                  href="https://kntnkmr.f5.si"
+                  target="_blank"
+                  >kntnkmr.f5.si</a
+                >
+              </div>
+              <div class="tags"><span class="tag">メンバー</span></div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="openModal(event,this)">
+                詳細
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-name="石破 茂"
+            data-tags="メンバー"
+            tabindex="0"
+          >
+            <div class="avatar">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMVFRUXFxUVFxUVFxU...R0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t"
+                alt="石破茂"
+                style="
+                  width: 68px;
+                  height: 68px;
+                  border-radius: 12px;
+                  object-fit: cover;
+                "
+              />
+            </div>
+            <div class="meta">
+              <h3 class="name">石破 茂</h3>
+              <div class="role">メンバー</div>
+              <div class="bio">
+                林檎民主党に参加しているメンバー。左翼よりやって参りました。
+              </div>
+              <div class="tags"><span class="tag">メンバー</span></div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="openModal(event,this)">
+                詳細
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-name="月影 心菜"
+            data-tags="管理者"
+            tabindex="0"
+          >
+            <div class="avatar">月</div>
+            <div class="meta">
+              <h3 class="name">月影 心菜</h3>
+              <div class="role">サーバー提供者 / 最上位かもしれない権限者</div>
+              <div class="bio">
+                林檎民主党のサーバー提供者として活動。総裁よりも権限が高い“かもしれない”管理者です。
+              </div>
+              <div class="tags"><span class="tag">管理者</span></div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="openModal(event,this)">
+                詳細
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-name="rurusoba"
+            data-tags="メンバー"
+            tabindex="0"
+          >
+            <div class="avatar">r</div>
+            <div class="meta">
+              <h3 class="name">rurusoba</h3>
+              <div class="role">メンバー</div>
+              <div class="bio">
+                オンライン活動を中心に林檎民主党を支えるメンバー。
+              </div>
+              <div class="tags"><span class="tag">メンバー</span></div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="openModal(event,this)">
+                詳細
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="card"
+            data-name="あざりん"
+            data-tags="総裁"
+            tabindex="0"
+          >
+            <div class="avatar">あ</div>
+            <div class="meta">
+              <h3 class="name">あざりん</h3>
+              <div class="role">林檎党総裁</div>
+              <div class="bio">
+                林檎民主党をまとめる総裁。穏やかでリーダーシップに優れ、党の象徴的存在。
+              </div>
+              <div class="tags"><span class="tag">総裁</span></div>
+            </div>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="openModal(event,this)">
+                詳細
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        このページはサンプルHTMLです。メンバーの追加・編集は &lt;article
+        class="card" ... &gt; をコピーして編集してください。
+      </footer>
+    </div>
+    <!-- モーダル（非表示 -->
+    <div
+      id="modalBackdrop"
+      class="modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal" role="document">
+        <div class="head">
+          <div class="big-avatar" id="modalAvatar">名</div>
+          <div>
+            <h2 id="modalName">名前</h2>
+            <div id="modalRole" style="color: var(--muted); margin-top: 6px">
+              役職
+            </div>
+          </div>
+          <div class="close" onclick="closeModal()" aria-label="閉じる">✕</div>
+        </div>
+        <div
+          id="modalBio"
+          style="margin-top: 12px; color: var(--muted); line-height: 1.6"
+        >
+          詳細プロフィール...
+        </div>
+        <div
+          style="margin-top: 12px; display: flex; gap: 8px"
+          id="modalTags"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
